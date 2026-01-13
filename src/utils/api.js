@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// Soporta ambas variables: REACT_APP_API_URL (con /api) o REACT_APP_BACKEND_URL (sin /api)
-const API_URL = process.env.REACT_APP_API_URL || 
-                (process.env.REACT_APP_BACKEND_URL ? `${process.env.REACT_APP_BACKEND_URL}/api` : '/api');
+// Soporta REACT_APP_API_URL (Vercel) o REACT_APP_BACKEND_URL (desarrollo)
+const API_URL = process.env.REACT_APP_API_URL || `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const api = axios.create({
   baseURL: API_URL,
