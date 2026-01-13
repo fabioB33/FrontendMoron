@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-// Usar REACT_APP_API_URL que ya incluye /api, o REACT_APP_BACKEND_URL + /api
-const API_URL = process.env.REACT_APP_API_URL || `${process.env.REACT_APP_BACKEND_URL}/api`;
+// Soporta ambas variables: REACT_APP_API_URL (con /api) o REACT_APP_BACKEND_URL (sin /api)
+const API_URL = process.env.REACT_APP_API_URL || 
+                (process.env.REACT_APP_BACKEND_URL ? `${process.env.REACT_APP_BACKEND_URL}/api` : '/api');
 
 const api = axios.create({
   baseURL: API_URL,

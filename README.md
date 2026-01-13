@@ -1,231 +1,70 @@
-# 🌐 Argentina Habilitaciones - Frontend
+# Getting Started with Create React App
 
-Aplicación web React para el sistema de gestión de habilitaciones y certificados AFAP del Municipio de Morón.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 🛠️ Stack Tecnológico
+## Available Scripts
 
-- **Framework**: React 19
-- **Routing**: React Router DOM 7
-- **Styling**: TailwindCSS 3 + Radix UI
-- **State Management**: React Query (TanStack)
-- **Forms**: React Hook Form + Zod
-- **HTTP Client**: Axios
-- **Build Tool**: Create React App (CRACO)
+In the project directory, you can run:
 
-## 📋 Requisitos
+### `npm start`
 
-- Node.js 18+
-- Yarn o npm
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## 🚀 Instalación Local
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### 1. Clonar el repositorio
+### `npm test`
 
-```bash
-git clone https://github.com/fabioB33/FrontendMoron.git
-cd FrontendMoron
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 2. Instalar dependencias
+### `npm run build`
 
-```bash
-yarn install
-# o
-npm install
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 3. Configurar variables de entorno
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```bash
-cp .env.example .env
-# Editar .env con la URL del backend
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-**Variables requeridas:**
-```env
-REACT_APP_API_URL=http://localhost:8000/api
-```
+### `npm run eject`
 
-### 4. Ejecutar en desarrollo
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```bash
-yarn start
-# o
-npm start
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-La aplicación estará disponible en http://localhost:3000
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## 🏗️ Build de Producción
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```bash
-yarn build
-# o
-npm run build
-```
+## Learn More
 
-Los archivos de producción estarán en la carpeta `build/`.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 📁 Estructura del Proyecto
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```
-frontend/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/         # Componentes reutilizables
-│   │   ├── ui/            # Componentes UI (Radix/shadcn)
-│   │   ├── AIAssistant.js # Asistente IA
-│   │   ├── DashboardLayout.js
-│   │   ├── ProtectedRoute.js
-│   │   └── PublicLayout.js
-│   ├── contexts/          # Contextos React
-│   │   ├── AuthContext.js
-│   │   └── AIContext.js
-│   ├── hooks/             # Custom hooks
-│   │   └── use-toast.js
-│   ├── pages/             # Páginas/Rutas
-│   │   ├── DashboardPage.js
-│   │   ├── EstadisticasPage.js
-│   │   ├── InspeccionesPage.js
-│   │   ├── LandingPage.js
-│   │   ├── LoginPage.js
-│   │   ├── MisSolicitudesPage.js
-│   │   ├── NuevaSolicitudPage.js
-│   │   ├── RegisterPage.js
-│   │   ├── SolicitudesPage.js
-│   │   └── VerificarCertificadoPage.js
-│   ├── utils/
-│   │   └── api.js         # Cliente HTTP configurado
-│   ├── lib/
-│   │   └── utils.js       # Utilidades (cn, etc.)
-│   ├── App.js             # Componente principal
-│   ├── App.css
-│   ├── index.js           # Entry point
-│   └── index.css          # Estilos globales (Tailwind)
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-├── craco.config.js
-└── README.md
-```
+### Code Splitting
 
-## 🎨 Componentes UI
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Este proyecto utiliza componentes de [shadcn/ui](https://ui.shadcn.com/) basados en Radix UI:
+### Analyzing the Bundle Size
 
-- Accordion, Alert, Avatar, Badge
-- Button, Card, Checkbox, Dialog
-- Dropdown Menu, Form, Input, Label
-- Navigation Menu, Popover, Progress
-- Select, Separator, Sheet, Skeleton
-- Table, Tabs, Toast, Tooltip
-- Y más...
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## 🔐 Autenticación
+### Making a Progressive Web App
 
-El sistema usa JWT para autenticación:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-- Login con CUIT/CUIL y contraseña
-- Tokens almacenados en localStorage
-- Rutas protegidas con `ProtectedRoute`
-- Refresh automático del token
+### Advanced Configuration
 
-## 📱 Páginas Principales
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-| Ruta | Página | Descripción |
-|------|--------|-------------|
-| `/` | Landing | Página principal pública |
-| `/login` | Login | Inicio de sesión |
-| `/register` | Register | Registro de usuarios |
-| `/verificar/:codigo` | Verificar | Verificar certificado |
-| `/dashboard` | Dashboard | Panel principal (protegido) |
-| `/solicitudes` | Solicitudes | Gestión de solicitudes |
-| `/mis-solicitudes` | Mis Solicitudes | Solicitudes del usuario |
-| `/nueva-solicitud` | Nueva Solicitud | Crear solicitud |
-| `/inspecciones` | Inspecciones | Gestión de inspecciones |
-| `/estadisticas` | Estadísticas | Reportes y métricas |
+### Deployment
 
-## 🐳 Docker
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### Build de imagen
+### `npm run build` fails to minify
 
-```bash
-docker build -t habilitaciones-frontend .
-```
-
-### Ejecutar con Docker
-
-```bash
-docker run -d -p 80:80 habilitaciones-frontend
-```
-
-## 🚀 Deploy
-
-### Vercel (Recomendado)
-
-1. Conectar repositorio a Vercel
-2. Configurar variable de entorno:
-   - `REACT_APP_API_URL` = URL del backend
-3. Deploy automático en cada push
-
-### Netlify
-
-1. Conectar repositorio
-2. Build command: `yarn build`
-3. Publish directory: `build`
-4. Configurar variable `REACT_APP_API_URL`
-
-### Variables de Entorno en Producción
-
-```env
-REACT_APP_API_URL=https://tu-backend.railway.app/api
-```
-
-## 🧪 Testing
-
-```bash
-yarn test
-# o
-npm test
-```
-
-## 📝 Scripts Disponibles
-
-| Script | Descripción |
-|--------|-------------|
-| `yarn start` | Servidor de desarrollo |
-| `yarn build` | Build de producción |
-| `yarn test` | Ejecutar tests |
-
-## 🔧 Configuración
-
-### Tailwind CSS
-
-Configurado en `tailwind.config.js` con:
-- Tema personalizado
-- Animaciones
-- Colores custom
-
-### CRACO
-
-Configurado en `craco.config.js` para:
-- Alias de paths
-- Plugins adicionales
-
-## 🤝 Contribuir
-
-1. Fork el repositorio
-2. Crear branch (`git checkout -b feature/nueva-feature`)
-3. Commit cambios (`git commit -am 'Agregar nueva feature'`)
-4. Push al branch (`git push origin feature/nueva-feature`)
-5. Crear Pull Request
-
-## 📝 Licencia
-
-[Tu licencia aquí]
-
-## 🔗 Links
-
-- **Backend**: https://github.com/fabioB33/BackendMoron
-- **API Docs**: [URL del backend]/docs
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
